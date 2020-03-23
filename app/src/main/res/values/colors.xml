@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e24c00</color>
+    <color name="colorPrimaryDark">#5748f1</color>
+    <color name="colorAccent">#e24c00</color>
+    <color name="light_gray">#F1F1F1</color>
+    <color name="gray">#9a9a9a</color>
+    <color name="med_gray">#474747</color>
+    <color name="main_theme">#e24c00</color>
+    <color name="text">#000000</color>
+    <color name="texthint">#9a9a9a</color>
+    <color name="lightPrimary">#F8B9AC</color>
+    <color name="buttonPressed">#bd3013</color>
+    <color name="dark_gray">#2d2d2d</color>
+    <color name ="background">#FFFFFF</color>
+    <color name ="background2">#F4F4F4</color>
+    <color name ="secondary">#f59581</color>
+    <color name="highlight">#ff7952</color>
+    <color name="darkGray">#3a3a3a</color>
+
+
+    <color name ="green">#ff8c00</color>
+</resources>
+
+

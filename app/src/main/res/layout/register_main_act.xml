@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".login.RegisterMain">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView8"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/reg_dot_2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:alpha="0.05"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/reg_dot_3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/reg_dot_1"
+                app:layout_constraintTop_toTopOf="@+id/reg_dot_1"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/dot_pulse"
+                app:lottie_scale="2" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/reg_dot_3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:alpha="0.05"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/reg_dot_2"
+                app:layout_constraintTop_toTopOf="@+id/reg_dot_2"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/dot_pulse"
+                app:lottie_scale="2" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/reg_dot_1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="12dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/reg_dot_2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/dot_pulse"
+                app:lottie_scale="2" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Verification"
+                android:textColor="@color/dark_gray"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:translationY="-12dp"
+                app:layout_constraintEnd_toEndOf="@+id/reg_dot_2"
+                app:layout_constraintStart_toStartOf="@+id/reg_dot_2"
+                app:layout_constraintTop_toBottomOf="@+id/reg_dot_2" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Setup"
+                android:textColor="@color/dark_gray"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:translationY="-12dp"
+                app:layout_constraintEnd_toEndOf="@+id/reg_dot_3"
+                app:layout_constraintStart_toStartOf="@+id/reg_dot_3"
+                app:layout_constraintTop_toBottomOf="@+id/reg_dot_3" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Details"
+                android:textColor="@color/dark_gray"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:translationY="-12dp"
+                app:layout_constraintEnd_toEndOf="@+id/reg_dot_1"
+                app:layout_constraintStart_toStartOf="@+id/reg_dot_1"
+                app:layout_constraintTop_toBottomOf="@+id/reg_dot_1" />
+
+            <ProgressBar
+                android:id="@+id/reg_progress_1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:alpha="0.9"
+                android:progressBackgroundTint="@color/lightPrimary"
+                android:progressTint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/reg_dot_1"
+                app:layout_constraintEnd_toStartOf="@+id/reg_dot_2"
+                app:layout_constraintStart_toEndOf="@+id/reg_dot_1"
+                app:layout_constraintTop_toTopOf="@+id/reg_dot_1" />
+
+            <ProgressBar
+                android:id="@+id/reg_progress_2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:alpha="0.9"
+                android:progressBackgroundTint="@color/lightPrimary"
+                android:progressTint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/reg_dot_3"
+                app:layout_constraintEnd_toStartOf="@+id/reg_dot_3"
+                app:layout_constraintStart_toEndOf="@+id/reg_dot_2"
+                app:layout_constraintTop_toTopOf="@+id/reg_dot_3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/regFragContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView8">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:checkable="true"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView2"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imageView15"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginStart="8dp"
+                            android:padding="8dp"
+                            android:scaleType="fitXY"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_school_icon" />
+
+                        <ImageView
+                            android:id="@+id/imageView11"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:elevation="0dp"
+                            android:padding="12dp"
+                            android:scaleType="fitXY"
+                            app:layout_constraintStart_toEndOf="@+id/imageView15"
+                            app:layout_constraintTop_toTopOf="@+id/clothingBtn"
+                            app:srcCompat="@drawable/ic_electronics_icon" />
+
+                        <ImageButton
+                            android:id="@+id/clothingBtn"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_weight="1"
+                            android:background="@color/fui_transparent"
+                            android:elevation="0dp"
+                            android:padding="8dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_clothes_icon"
+                            app:layout_constraintStart_toEndOf="@+id/imageView11"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/householdBtn"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:elevation="0dp"
+                            android:padding="12dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_household_icon"
+                            android:text="Household"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/imageView17"
+                            app:layout_constraintTop_toTopOf="@+id/furnitureBtn" />
+
+                        <ImageButton
+                            android:id="@+id/furnitureBtn"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_weight="1"
+                            android:background="@color/fui_transparent"
+                            android:elevation="0dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_furniture_icon"
+                            android:text="Furniture"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/clothingBtn"
+                            app:layout_constraintTop_toTopOf="@+id/clothingBtn" />
+
+                        <ImageView
+                            android:id="@+id/imageView17"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:padding="4dp"
+                            android:scaleType="fitXY"
+                            app:layout_constraintStart_toEndOf="@+id/furnitureBtn"
+                            app:srcCompat="@drawable/ic_vehicle_icon" />
+
+                        <ImageView
+                            android:id="@+id/imageView16"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:scaleType="fitXY"
+                            app:layout_constraintStart_toEndOf="@+id/imageView18"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_misc_icon" />
+
+                        <ImageView
+                            android:id="@+id/imageView18"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:padding="8dp"
+                            android:scaleType="fitXY"
+                            app:layout_constraintStart_toEndOf="@+id/householdBtn"
+                            app:srcCompat="@drawable/ic_food_icon"
+                            tools:layout_editor_absoluteY="0dp" />
+
+                        <TextView
+                            android:id="@+id/textView34"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Vehicle"
+                            android:textColor="@color/med_gray"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView17"
+                            app:layout_constraintStart_toStartOf="@+id/imageView17" />
+
+                        <TextView
+                            android:id="@+id/textView35"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Electronics"
+                            android:textColor="@color/med_gray"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView11"
+                            app:layout_constraintStart_toStartOf="@+id/imageView11" />
+
+                        <TextView
+                            android:id="@+id/textView36"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="School"
+                            android:textColor="@color/med_gray"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView15"
+                            app:layout_constraintStart_toStartOf="@+id/imageView15" />
+
+                        <TextView
+                            android:id="@+id/textView31"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Furniture"
+                            android:textColor="@color/med_gray"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/furnitureBtn"
+                            app:layout_constraintStart_toStartOf="@+id/furnitureBtn" />
+
+                        <TextView
+                            android:id="@+id/textView32"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Household"
+                            android:textColor="@color/med_gray"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/householdBtn"
+                            app:layout_constraintStart_toStartOf="@+id/householdBtn" />
+
+                        <TextView
+                            android:id="@+id/textView38"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Food"
+                            android:textColor="@color/med_gray"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView18"
+                            app:layout_constraintStart_toStartOf="@+id/imageView18" />
+
+                        <TextView
+                            android:id="@+id/textView37"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Misc."
+                            android:textColor="@color/med_gray"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView16"
+                            app:layout_constraintStart_toStartOf="@+id/imageView16" />
+
+                        <TextView
+                            android:id="@+id/textView29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Clothing"
+                            android:textColor="@color/med_gray"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/clothingBtn"
+                            app:layout_constraintStart_toStartOf="@+id/clothingBtn" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:elevation="0dp"
+                android:visibility="gone"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="0dp">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/headerPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="true"
+                        android:elevation="0dp">
+
+                    </androidx.viewpager.widget.ViewPager>
+
+                    <com.afollestad.viewpagerdots.DotsIndicator
+                        android:id="@+id/headerDotIndicator"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:elevation="0dp"
+                        app:dot_tint="#FFFFFF"
+                        app:layout_constraintBottom_toBottomOf="@+id/headerPager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

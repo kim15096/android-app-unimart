@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_profile_bg">
+
+    <TextView
+        android:id="@+id/popup_accountName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/dark_gray"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/popup_ProfilePic"
+        app:layout_constraintTop_toTopOf="@+id/progressBar2"
+        tools:text="ANDREW KIM" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/popup_ProfilePic"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/ic_default_profilepic"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="0dp"
+        app:civ_shadow="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:progressBarStyleHorizontal"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="1dp"
+        android:progress="100"
+        android:progressDrawable="@drawable/circular_progressbar_popup"
+        app:layout_constraintBottom_toBottomOf="@+id/popup_ProfilePic"
+        app:layout_constraintEnd_toEndOf="@+id/popup_ProfilePic"
+        app:layout_constraintStart_toStartOf="@+id/popup_ProfilePic"
+        app:layout_constraintTop_toTopOf="@+id/popup_ProfilePic" />
+
+    <ImageView
+        android:id="@+id/popup_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_main_24dp" />
+
+    <Button
+        android:id="@+id/popup_messageBtn"
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/solidbtn_bg"
+        android:elevation="0dp"
+        android:soundEffectsEnabled="false"
+        android:stateListAnimator="@null"
+        android:text="Message"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/popup_ProfilePic" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="95dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/btn_bg_border"
+        android:elevation="0dp"
+        android:text="Report"
+        android:textAllCaps="false"
+        android:textColor="@color/main_theme"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/popup_ProfilePic"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/popup_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/profilepic_animation2"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/account_profilePic"
+            app:layout_constraintEnd_toEndOf="@+id/account_profilePic"
+            app:layout_constraintStart_toStartOf="@+id/account_profilePic"
+            app:layout_constraintTop_toTopOf="@+id/account_profilePic"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading_thin" />
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/market_toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:elevation="2dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        tool:layout_editor_absoluteX="0dp" />
+
+    <View
+        android:id="@+id/dividerline4"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:alpha="0.5"
+        android:background="@color/gray"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_profilePic" />
+
+    <View
+        android:id="@+id/dividerline2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/light_gray"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/account_Viewpager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/account_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto"
+        android:includeFontPadding="false"
+        android:textColor="@color/dark_gray"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/account_profilePic"
+        app:layout_constraintTop_toTopOf="@+id/account_profilePic"
+        tool:text="Andrew Kim" />
+
+    <TextView
+        android:id="@+id/account_uniname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/roboto"
+        android:text="Account"
+        android:textColor="@color/main_theme"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/market_toolbar2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/account_TabLayout"
+        style="@style/tab_text"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:clipToPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView50"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorHeight="1.5dp"
+        app:tabInlineLabel="true"
+        app:tabRippleColor="@color/lightPrimary"
+        app:tabTextAppearance="@style/tab_text"
+        app:tabTextColor="@color/dark_gray" />
+
+    <ImageView
+        android:id="@+id/account_SettingsBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/market_toolbar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_settings_main_24dp" />
+
+    <FrameLayout
+        android:id="@+id/sellFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:translationZ="15dp"
+        tool:visibility="gone">
+
+    </FrameLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/account_profilePic"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_default_profilepic"
+        app:civ_border_color="@null"
+        app:civ_border_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/market_toolbar2" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/profilepic_animation"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="centerCrop"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/account_profilePic"
+        app:layout_constraintEnd_toEndOf="@+id/account_profilePic"
+        app:layout_constraintStart_toStartOf="@+id/account_profilePic"
+        app:layout_constraintTop_toTopOf="@+id/account_profilePic"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading_thin"
+        tool:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/account_SettingsBtn2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/market_toolbar2"
+        app:layout_constraintEnd_toStartOf="@+id/account_SettingsBtn"
+        app:srcCompat="@drawable/ic_notifications_main_24dp" />
+
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/account_Viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        android:overScrollMode="never"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_TabLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <my.app.uni.slidinglayer.SlidingLayer
+        android:id="@+id/AccountItemSlider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:elevation="6dp"
+        app:changeStateOnTap="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:stickTo="bottom"
+        tool:layout_editor_absoluteX="100dp"
+        tool:visibility="gone">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar10"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/sellpost_deleteBtn"
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="12dp"
+                android:elevation="4dp"
+                android:padding="2dp"
+                app:layout_constraintBottom_toBottomOf="@id/toolbar10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_trash" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="12dp"
+                android:elevation="4dp"
+                android:padding="2dp"
+                app:layout_constraintBottom_toBottomOf="@id/toolbar10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5"
+                app:srcCompat="@drawable/ic_keyboard_arrow_down_main_24dp" />
+
+            <TextView
+                android:id="@+id/account_slider_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:fontFamily="@font/roboto"
+                android:includeFontPadding="false"
+                android:text="Selling #macbook"
+                android:textColor="@color/dark_gray"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/toolbar10" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </my.app.uni.slidinglayer.SlidingLayer>
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="95\nReputation"
+        android:textColor="@color/darkGray"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/account_profilePic"
+        app:layout_constraintTop_toBottomOf="@+id/account_Name" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="26\nBought"
+        android:textColor="@color/darkGray"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView44"
+        app:layout_constraintTop_toTopOf="@+id/textView44" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="50\nSold"
+        android:textColor="@color/darkGray"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView45"
+        app:layout_constraintTop_toTopOf="@+id/textView45" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Available: $24.62"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/account_profilePic"
+        app:layout_constraintTop_toBottomOf="@+id/dividerline4" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Pending: $14.21"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/account_profilePic"
+        app:layout_constraintTop_toBottomOf="@+id/textView47" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Transfer Balance"
+        android:textColor="@color/main_theme"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView47" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

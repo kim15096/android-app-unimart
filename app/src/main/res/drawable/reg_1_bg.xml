@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@color/background"/>
+
+    <item
+        android:drawable="@drawable/reg_clipart_test"
+        android:width="190dp"
+        android:height="130dp"
+        android:gravity="bottom|left"/>
+
+</layer-list>
