@@ -31,8 +31,8 @@ import my.app.uni.R;
 public class RegisterFragment2 extends Fragment {
     private FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     private FirebaseAuth.AuthStateListener mAuthListener;
-    private String full_name_text;
-    private EditText full_name;
+    private String full_name_text, fName, lName;
+    private EditText first_name, last_name;
     private SharedPreferences preferences;
     private LottieAnimationView reg_dot_1, reg_dot_2, reg_dot_3;
     private ProgressBar progressBar1, progressBar2, progressBar3;
@@ -93,8 +93,11 @@ public class RegisterFragment2 extends Fragment {
 
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user.isEmailVerified()) {
-                    full_name = getActivity().findViewById(R.id.registration_fname);
-                    full_name_text = full_name.getText().toString().trim();
+                    first_name = getActivity().findViewById(R.id.registration_fname);
+                    last_name = getActivity().findViewById(R.id.registration_lastName);
+                    fName = first_name.toString().trim();
+                    lName = last_name.toString().trim();
+                    full_name_text = fName + " " + lName;
                     EditText email = getActivity().findViewById(R.id.Registration_et_email);
                     String emailStr = email.getText().toString().trim();
 
@@ -112,7 +115,8 @@ public class RegisterFragment2 extends Fragment {
 
                     final FirebaseFirestore db = FirebaseFirestore.getInstance();
                     Map<String, Object> userString = new HashMap<>();
-                    userString.put("name", full_name_text);
+                    userString.put("first name", fName);
+                    userString.put("last name", lName);
                     userString.put("userID", userID);
                     userString.put("school", school);
                     userString.put("image URL", null);
