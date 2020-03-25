@@ -95,8 +95,8 @@ public class RegisterFragment2 extends Fragment {
         if (user.isEmailVerified()) {
                     first_name = getActivity().findViewById(R.id.registration_fname);
                     last_name = getActivity().findViewById(R.id.registration_lastName);
-                    fName = first_name.toString().trim();
-                    lName = last_name.toString().trim();
+                    fName = first_name.getText().toString().trim();
+                    lName = last_name.getText().toString().trim();
                     full_name_text = fName + " " + lName;
                     EditText email = getActivity().findViewById(R.id.Registration_et_email);
                     String emailStr = email.getText().toString().trim();

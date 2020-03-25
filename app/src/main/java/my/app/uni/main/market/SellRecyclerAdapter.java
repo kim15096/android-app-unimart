@@ -382,7 +382,7 @@ public class SellRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                 @Override
                 public void onSuccess(DocumentSnapshot documentSnapshot) {
-                    first = documentSnapshot.getData().get("name").toString();
+                    first = documentSnapshot.getData().get("first name").toString();
 
                     CircularImageView circularImageView = mView.findViewById(R.id.market_sellcard_profilepic);
                     if (documentSnapshot.getData().get("image URL")!=null) {
