@@ -3,7 +3,7 @@
 ## Introduction
 Goal: Provide university students with a safe and convenient platform to buy and sell. Collaborate with school officials or partner with Amazon to provide a locker system for fast drop-off of items.
 
-*Refer to "Introduction to UNiMarket.pdf" for more information
+*Please refer to "Introduction to Uni Market.pdf" for more information
 
 ## Login Screen
 <img src="loginScreen.jpg" width="100">
