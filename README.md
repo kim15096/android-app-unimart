@@ -15,5 +15,5 @@ Goal: Provide university students with a safe and convenient platform to buy and
 </p>
 
 ## Add Listing
-<img src="additem.jpg" width="100">
+<img src="additem.jpeg" width="100">
  
